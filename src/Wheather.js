@@ -71,7 +71,7 @@ Properties font-serif text-3xl
 md:text-4xl mb-4 ">
         What's the weather? 👀 
        </h1>
-      <div className="card flex flex-col justify-center rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 h-min w-max p-4 md:p-12">
+      <div className="card flex flex-col justify-center rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 h-min w-max p-4 md:p-12 mx-2">
       
         {/* Search box */}
         <form
