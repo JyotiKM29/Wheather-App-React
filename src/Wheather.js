@@ -68,10 +68,10 @@ const WeatherApp = () => {
     <div className="bg-gray-700 h-screen w-screen py-12 px-6 mx-auto md:p-64 flex flex-col   items-center">
         <h1 className="text-white Class
 Properties font-serif text-3xl
-md:text-4xl mb-4 ">
+md:text-4xl mb-4 overflow-hidden">
         What's the weather? 👀 
        </h1>
-      <div className="card flex flex-col justify-center rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 h-min w-max p-4 md:p-12 mx-2">
+      <div className="card flex flex-col justify-center rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 h-min w-max py-6 px-8 md:p-12 ">
       
         {/* Search box */}
         <form
@@ -79,7 +79,7 @@ md:text-4xl mb-4 ">
             e.preventDefault();
             handleSearch();
           }}
-          className="searchBox flex flex-row space-x-4 md:justify-between md:space-x-6"
+          className="searchBox flex flex-col md:flex-row space-x-2 md:justify-between md:space-x-6 space-y-4"
         >
           <label className="search flex relative">
           <img
@@ -91,13 +91,13 @@ md:text-4xl mb-4 ">
               type="text"
               placeholder="Enter City Name..."
               spellCheck="false"
-              className="rounded-full px-8 py-2 w-50 md:py-4 md:px-12 md:w-96"
+              className="rounded-full px-8 py-2 w-full md:py-4 md:px-12 md:w-96"
               value={city}
               onChange={(e) => setCity(e.target.value)}
             />
           </label>
           <button
-            className="button rounded-full border px-6  w-max md:w-full"
+            className="button rounded-full border px-6  py-2 w-full"
             type="submit"
           >
           <p className="text-white font-bold"> Submit</p>
@@ -124,11 +124,11 @@ md:text-4xl mb-4 ">
             <img
               src={`images/${weatherData.weather[0].main.toLowerCase()}.png`}
               alt="climate img"
-              className="weather-icon h-30 w-30 md:h-40 md:w-40"
+              className="weather-icon h-26 w-26 md:h-40 md:w-40"
             />
 
             {/* Temp */}
-            <h2 className="temp text-white font-bold text-5xl md:text-6xl">
+            <h2 className="temp text-white font-bold text-3xl md:text-6xl">
               {Math.round(weatherData.main.temp)} °C
             </h2>
             {/* City name */}
