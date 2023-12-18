@@ -124,7 +124,7 @@ md:text-4xl mb-4 overflow-hidden">
             <img
               src={`images/${weatherData.weather[0].main.toLowerCase()}.png`}
               alt="climate img"
-              className="weather-icon h-20 w-20 md:h-40 md:w-40"
+              className="weather-icon h-30 w-30 md:h-40 md:w-40"
             />
 
             {/* Temp */}
@@ -141,7 +141,7 @@ md:text-4xl mb-4 overflow-hidden">
         {weatherData && (
           <div
             id="main2"
-            className="flex flex-row justify-center space-x-12 md:space-x-24 py-12"
+            className="flex flex-row justify-center space-x-12 md:space-x-24 pt-8"
           >
             {/* Climate */}
             <div className="flex flex-row">
