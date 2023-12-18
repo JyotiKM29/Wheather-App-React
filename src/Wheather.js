@@ -65,7 +65,7 @@ const WeatherApp = () => {
   };
 
   return (
-    <div className="bg-gray-700 h-screen w-screen py-12 px-6 mx-auto md:p-64 flex flex-col   items-center">
+    <div className="bg-gray-700 h-screen w-screen py-12  px-6 mx-auto md:px-64 md:py-10 flex flex-col  justify-start items-center">
         <h1 className="text-white Class
 Properties font-serif text-3xl
 md:text-4xl mb-4 overflow-hidden">
@@ -79,9 +79,9 @@ md:text-4xl mb-4 overflow-hidden">
             e.preventDefault();
             handleSearch();
           }}
-          className="searchBox flex flex-col md:flex-row space-x-2 md:justify-between md:space-x-6 space-y-4"
+          className="searchBox  flex flex-col md:flex-row space-x-0 md:justify-between md:space-x-6 space-y-4 md:space-y-0 items-center align-center"
         >
-          <label className="search flex relative">
+          <label className="w-full search flex relative">
           <img
               src="images/search.png"
               alt="search icon"
@@ -91,13 +91,13 @@ md:text-4xl mb-4 overflow-hidden">
               type="text"
               placeholder="Enter City Name..."
               spellCheck="false"
-              className="rounded-full px-8 py-2 w-full md:py-4 md:px-12 md:w-96"
+              className="rounded-full px-8 py-2  md:py-4 md:px-12 md:w-96 w-full"
               value={city}
               onChange={(e) => setCity(e.target.value)}
             />
           </label>
           <button
-            className="button rounded-full border px-6  py-2 w-full"
+            className="button rounded-full border px-6  py-2  md:py-3 w-full "
             type="submit"
           >
           <p className="text-white font-bold"> Submit</p>
@@ -124,7 +124,7 @@ md:text-4xl mb-4 overflow-hidden">
             <img
               src={`images/${weatherData.weather[0].main.toLowerCase()}.png`}
               alt="climate img"
-              className="weather-icon h-26 w-26 md:h-40 md:w-40"
+              className="weather-icon h-20 w-20 md:h-40 md:w-40"
             />
 
             {/* Temp */}
