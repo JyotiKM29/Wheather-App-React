@@ -65,10 +65,10 @@ const WeatherApp = () => {
   };
 
   return (
-    <div className="bg-gray-700 h-screen w-screen py-12 px-6 mx-auto md:p-64 flex flex-col  justify-center items-center">
+    <div className="bg-gray-700 h-screen w-screen py-12 px-6 mx-auto md:p-64 flex flex-col   items-center">
         <h1 className="text-white Class
-Properties font-serif
-text-4xl mb-4">
+Properties font-serif text-3xl
+md:text-4xl mb-4 ">
         What's the weather? 👀 
        </h1>
       <div className="card flex flex-col justify-center rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 h-min w-max p-4 md:p-12">
@@ -91,7 +91,7 @@ text-4xl mb-4">
               type="text"
               placeholder="Enter City Name..."
               spellCheck="false"
-              className="rounded-full px-6 py-2 w-50 md:py-4 md:px-12 md:w-96"
+              className="rounded-full px-8 py-2 w-50 md:py-4 md:px-12 md:w-96"
               value={city}
               onChange={(e) => setCity(e.target.value)}
             />
